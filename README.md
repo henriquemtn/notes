@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Notes
 
-## Getting Started
+## Descrição
+**Notes** é um aplicativo de gerenciamento de projetos e tarefas, desenvolvido para oferecer uma interface simples e eficiente para o controle de anotações. Ele permite a criação e organização de notas de forma ágil, focando na praticidade para melhorar a produtividade.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 13**: A base do nosso frontend. Next.js oferece um framework React otimizado para a construção de aplicações web modernas e rápidas, com renderização do lado do servidor (SSR) e páginas estáticas (SSG).
+  
+- **React**: Utilizado para a construção de componentes reutilizáveis e dinâmicos no frontend, garantindo uma interface de usuário moderna e interativa.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Convex**: Serve como o backend reativo do projeto. Convex facilita a criação de aplicações full-stack, oferecendo gerenciamento em tempo real dos dados e sincronização automática entre o frontend e o backend.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Tailwind CSS**: Um framework CSS utilitário que facilita a criação de designs modernos e responsivos de maneira rápida, utilizando classes prontas que permitem estilizar componentes sem sair do código.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Funcionalidades
 
-## Learn More
+- Criação e edição de notas de forma rápida e simples.
+- Organização de notas em categorias.
+- Interface responsiva e intuitiva para melhor experiência do usuário.
+- Sincronização de dados em tempo real com backend reativo.
 
-To learn more about Next.js, take a look at the following resources:
+## Como Executar o Projeto Localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/usuario/notes-app.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Acesse o diretório do projeto:
+   ```bash
+   cd notes-app
+   ```
 
-## Deploy on Vercel
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Configure as variáveis de ambiente no arquivo `.env`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+6. Acesse a aplicação no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você deseja colaborar, sinta-se à vontade para abrir um *pull request* ou criar uma *issue* com suas sugestões.
+
+---
+
+Este projeto é mantido com ❤️ pela comunidade desenvolvedora.
+
