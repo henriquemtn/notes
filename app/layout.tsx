@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import localFont from "next/font/local";
@@ -38,6 +39,7 @@ export default function RootLayout({
           enableSystem
           storageKey="notes-theme"
           >
+            <Toaster position="bottom-center" />
           {children}
           </ThemeProvider>
         </ConvexClientProvider>
