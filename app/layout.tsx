@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/components/providers/convex-provider";
+import { ModalProvider } from "@/components/providers/modal-provicer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +40,8 @@ export default function RootLayout({
           enableSystem
           storageKey="notes-theme"
           >
-            <Toaster position="bottom-center" />
+          <ModalProvider />
+          <Toaster position="bottom-center" />
           {children}
           </ThemeProvider>
         </ConvexClientProvider>

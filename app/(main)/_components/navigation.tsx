@@ -12,8 +12,10 @@ import { DocumentList } from './document-list';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { TrashBox } from './trash-box';
 import { useSearch } from '@/hooks/use-search';
+import { useSettings } from '@/hooks/use-settings';
 
 export default function Navigation() {
+    const settings = useSettings();
     const search = useSearch();
     const pathname = usePathname();
     const isMobile = useMediaQuery('(max-width: 768px)');
@@ -138,7 +140,7 @@ export default function Navigation() {
                 />
                  <Item
                     label="Settings"
-                    onClick={() => {}}
+                    onClick={settings.onOpen}
                     icon={Settings}
                 />
                 <Item
@@ -149,7 +151,7 @@ export default function Navigation() {
                 <div className='mt-4'>
                     <DocumentList />
                     <Item
-                      onClick={() => {}}
+                      onClick={handleCreate}
                       icon={Plus}
                       label='Add a page'
                     />
