@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { ChevronsLeft, MenuIcon, Plus, PlusCircle, Search, Settings, Trash } from 'lucide-react';
-import { useParams, usePathname } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import React, { ElementRef, useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'usehooks-ts';
 import { UserItem } from './user-item';
@@ -17,6 +17,7 @@ import { Navbar } from './navbar';
 
 export default function Navigation() {
     const settings = useSettings();
+    const router = useRouter();
     const search = useSearch();
     const params = useParams(); 
     const pathname = usePathname();
@@ -105,13 +106,16 @@ export default function Navigation() {
     }
 
     const handleCreate = () => {
-        const promise = create({ title: "Untitled" });
+        const promise = create({ title: "Untitled" })
+            .then((documentId) => router.push(`/documents/${documentId}`));
 
         toast.promise(promise, {
             loading: "Creating document...",
             success: "Document created!",
             error: "Failed to create a new Document"
         })
+
+
     }
 
     return (

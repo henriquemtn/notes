@@ -6,6 +6,7 @@ import { useMutation } from "convex/react";
 import { PlusCircle } from "lucide-react";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
+import { update } from "@/convex/documents";
 
 const DocumentsPage = () => {
     const { user } = useUser();
