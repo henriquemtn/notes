@@ -15,19 +15,22 @@ export const SettingsModal = () => {
 
     return (
         <Dialog open={settings.isOpen} onOpenChange={settings.onClose}>
-            <DialogContent>
+            <DialogContent className="bg-white dark:bg-[#1F1F1F] dark:text-white">
                 <DialogHeader>
-                    <h2 className="text-lg font-medium">My settings</h2>
+                    <h2 className="text-lg font-medium ">My settings</h2>
                 </DialogHeader>
                 <div className="flex items-center justify-between">
                     <div className="flex flex-col gap-y-1">
                         <Label>
                             Appearance
                         </Label>
-                        <span className="text-[0.8rem] text-muted-foreground">
+                        <span className="text-[0.8rem] dark:text-gray-200 text-muted-foreground">
                             Customize how Notes looks on your device
                         </span>
                     </div>
+                    <div className="mt-4">
+                    <ModeToggle />
+                </div>
                 </div>
             </DialogContent>
         </Dialog>

@@ -6,6 +6,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/components/providers/convex-provider";
 import { ModalProvider } from "@/components/providers/modal-provicer";
+import { EdgeStoreProvider } from "@/lib/edgestore";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,16 +35,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}
       >
         <ConvexClientProvider>
-          <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          storageKey="notes-theme"
-          >
-          <ModalProvider />
-          <Toaster position="bottom-center" />
-          {children}
-          </ThemeProvider>
+          <EdgeStoreProvider>
+            <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            storageKey="notes-theme"
+            >
+            <ModalProvider />
+            <Toaster position="bottom-center" />
+            {children}
+            </ThemeProvider>
+          </EdgeStoreProvider>
         </ConvexClientProvider>
       </body>
     </html>
