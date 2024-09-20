@@ -1,59 +1,60 @@
 # Notes
 
-## Descrição
-**Notes** é um aplicativo de gerenciamento de projetos e tarefas, desenvolvido para oferecer uma interface simples e eficiente para o controle de anotações. Ele permite a criação e organização de notas de forma ágil, focando na praticidade para melhorar a produtividade.
+Notes is a project and task management application, designed to offer a simple and efficient interface for controlling notes. It allows you to create and organize notes quickly, focusing on practicality to improve productivity.
 
-## Tecnologias Utilizadas
+## Features
 
-- **Next.js 13**: A base do nosso frontend. Next.js oferece um framework React otimizado para a construção de aplicações web modernas e rápidas, com renderização do lado do servidor (SSR) e páginas estáticas (SSG).
-  
-- **React**: Utilizado para a construção de componentes reutilizáveis e dinâmicos no frontend, garantindo uma interface de usuário moderna e interativa.
+* 🔐 Authentication using Clerk
+* 📊 Real-time backend and database powered by Convex.dev
+* 🖼️ Upload images using Edge Store
+* 📝 Create and edit notes using BlockNote editor
+* 🙂 Emojis using Emoji Picker React
+* 🌲 Create hierarchies of notes
+* 🗑️ Archive, restore, and delete notes
+* 📢 Publish notes to share with others
+* ⬅️ Adjustable sidebar
+* ✨ Responsive UI and light/dark mode built with Tailwind and shadcn/ui
 
-- **Convex**: Serve como o backend reativo do projeto. Convex facilita a criação de aplicações full-stack, oferecendo gerenciamento em tempo real dos dados e sincronização automática entre o frontend e o backend.
+## Getting Started
 
-- **Tailwind CSS**: Um framework CSS utilitário que facilita a criação de designs modernos e responsivos de maneira rápida, utilizando classes prontas que permitem estilizar componentes sem sair do código.
+### Clone the repo
 
-## Funcionalidades
+```bash
+git clone https://github.com/henriquemtn/notes.git
+```
 
-- Criação e edição de notas de forma rápida e simples.
-- Organização de notas em categorias.
-- Interface responsiva e intuitiva para melhor experiência do usuário.
-- Sincronização de dados em tempo real com backend reativo.
+### Install dependencies
 
-## Como Executar o Projeto Localmente
+```bash
+npm install
+```
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/usuario/notes-app.git
-   ```
+### Setup .env file
 
-2. Acesse o diretório do projeto:
-   ```bash
-   cd notes-app
-   ```
+```env
+CONVEX_DEPLOYMENT=
 
-3. Instale as dependências:
-   ```bash
-   npm install
-   ```
+NEXT_PUBLIC_CONVEX_URL=
 
-4. Configure as variáveis de ambiente no arquivo `.env`.
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-5. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
+EDGE_STORE_ACCESS_KEY=
+EDGE_STORE_SECRET_KEY=
+```
 
-6. Acesse a aplicação no navegador:
-   ```
-   http://localhost:3000
-   ```
+### Start Convex
 
-## Contribuição
+```bash
+npx convex dev
+```
 
-Contribuições são bem-vindas! Se você deseja colaborar, sinta-se à vontade para abrir um *pull request* ou criar uma *issue* com suas sugestões.
+### Start the app
 
----
+```bash
+npm run dev
+```
 
-Este projeto é mantido com ❤️ pela comunidade desenvolvedora.
+### Credit
 
+Created by following along with [AntonioErdeljac/notion-clone-tutorial](https://github.com/AntonioErdeljac/notion-clone-tutorial).
