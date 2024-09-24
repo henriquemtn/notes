@@ -8,7 +8,6 @@ import { useParams } from "next/navigation";
 import { Title } from "./title";
 import Banner from "./banner";
 import { Menu } from "./menu";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Publish } from "./publish";
 
 interface NavbarProps {

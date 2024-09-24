@@ -6,7 +6,7 @@ import React from 'react'
 import { ModeToggle } from '@/components/mode-toggle';
 import { useScrollTop } from '@/hooks/use-scroll-top';
 import { cn } from '@/lib/utils';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { SignInButton, UserButton } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
 import { Spinner } from '@/components/spinner';
 import Link from 'next/link';
