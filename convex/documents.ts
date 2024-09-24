@@ -357,26 +357,3 @@ export const removeCoverImage = mutation({
         return document;
     }
 })
-
-export const getChildDocuments = query({
-    args: { id: v.id("documents") },
-    handler: async (ctx, args) => {
-        const identity = await ctx.auth.getUserIdentity();
-
-        if (!identity) {
-            throw new Error("Not authenticated");
-        }
-
-        const userId = identity.subject;
-        const children = await ctx.db
-            .query("documents")
-            .withIndex("by_user_parent", (q) => (
-                q
-                .eq("userId", userId)
-                .eq("parentDocument", args.id)
-            ))
-            .collect();
-
-        return children;
-    }
-});

@@ -12,6 +12,6 @@ export default function DocumentPages({documentId}:DocumentPagesProps) {
     const router = useRouter();
 
     return (
-        <div>DocumentPages</div>
+        <div className='pl-[54px]'>DocumentPages</div>
     )
 }
