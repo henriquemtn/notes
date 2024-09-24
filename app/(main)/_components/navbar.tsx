@@ -9,6 +9,7 @@ import { Title } from "./title";
 import Banner from "./banner";
 import { Menu } from "./menu";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Publish } from "./publish";
 
 interface NavbarProps {
     isCollapsed: boolean;
@@ -38,7 +39,7 @@ export const Navbar = ({isCollapsed, onResetWidth}: NavbarProps) => {
 
     return (
         <>
-            <nav className="bg-white dark:bg-[#1F1F1F] px-3 py-2 w-full flex items-center gap-x-4">
+            <nav className="bg-white dark:bg-[#1F1F1F] dark:text-white px-3 py-2 w-full flex items-center gap-x-4">
                 {isCollapsed && (
                     <MenuIcon
                     role="button"
@@ -49,6 +50,7 @@ export const Navbar = ({isCollapsed, onResetWidth}: NavbarProps) => {
                 <div className="flex items-center justify-between w-full">
                     <Title initialData={document} />
                     <div className="flex items-center gap-x-2">
+                        <Publish initialData={document} />
                         <Menu documentId={document._id} />
                     </div>
                 </div>

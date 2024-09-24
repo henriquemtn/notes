@@ -21,7 +21,7 @@ export const ConfirmModal = ({
             <AlertDialogTrigger onClick={(e) => e.stopPropagation()} asChild>
                 {children}
             </AlertDialogTrigger>
-            <AlertDialogContent>
+            <AlertDialogContent className="bg-white">
                 <AlertDialogHeader>
                     <AlertDialogTitle>
                         Are you sure?
