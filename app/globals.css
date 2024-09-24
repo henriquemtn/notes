@@ -7,11 +7,10 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body,
+:root {
+  min-height: 100vh;
 }
 
 body {
@@ -24,6 +23,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bn-container[data-color-scheme=dark] {
+  --bn-colors-editor-background: #191919 !important;
 }
 
 @layer base {
@@ -55,7 +58,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: #202020;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -79,8 +82,11 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --bn-colors-editor-text: #ffffff;
+  --bn-colors-editor-background: #202020;
   }
 }
+
 
 @layer base {
   * {
